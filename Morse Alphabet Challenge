@@ -1,0 +1,12 @@
+from string import ascii_lowercase
+
+alphabet = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", 
+	".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."]
+coded_alphabet = dict(zip(ascii_lowercase, alphabet))
+
+def enc(word):
+    coded_word = []
+    for i in word:
+        coded_word.append(coded_alphabet[i])
+    coded_word = ''.join(coded_word)
+    print('Your coded word:', coded_word)
