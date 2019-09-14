@@ -1,0 +1,17 @@
+##Implement an autocomplete system.
+##That is, given a query string s and a set of all possible query strings,
+##return all strings in the set that have s as a prefix.
+
+##For example, given the query string de and the set of strings [dog, deer, deal], return [deer, deal].
+
+def find_auto(strings, prefix):
+    limit = len(prefix)
+    output_dict = []
+    for i in range(len(strings)):
+        if prefix.lower() == strings[i][:limit].lower():
+            output_dict.append(strings[i])
+    return output_dict
+    
+##lisst = ['hello','drape','hell','hendrick','example','binary','HELLAS']
+##find_auto(lisst, 'HEL')    
+    
